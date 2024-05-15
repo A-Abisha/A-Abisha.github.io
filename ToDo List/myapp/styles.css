@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    position: relative;
+  
+}
+/* Full Screen */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg-img.jpg) center/cover no-repeat fixed;
+    padding: 10px;
+}
+
+/* To-Do Container */
+.todo-app{
+   width: 100%;
+   max-width: 540px;
+   background-color: white;
+   border: 4px groove rgb(124, 192, 238);
+   margin: 70px 750px;
+   padding: 40px 30px 70px;
+   border-radius: 10px;
+   box-shadow: 10px 20px 40px rgb(161, 230, 238);
+}
+
+/* To-Do Heading */
+.todo-app h1{
+    color: rgb(9, 9, 255);
+    justify-content: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.todo-app h1 img{
+    height: 40px;
+    margin-left: 10px;
+}
+
+/* Add Task */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(201, 222, 229);
+    border-radius: 3px;
+    padding-left: 5px;
+    margin-bottom: 25px;
+}
+
+input{
+   
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#add-btn{
+    border: none;
+    outline: none;
+    padding:  10px 30px;
+    background: green;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#add-btn:hover{
+    background: rgb(58, 159, 58);
+}
+
+/* List Items */
+ul li{
+    list-style: none;
+    border: 2px groove rgb(53, 232, 53);
+    font-size: 17px;
+    padding: 12px 8px 12px 48px;
+    cursor: pointer;
+    background-color:rgb(193, 237, 193);
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 15px rgb(166, 240, 173);
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(checkbox.png);
+    background-size: cover;
+    background-position: center;
+    top:8px;
+    left: 8px;
+
+}
+
+ul li.checked{
+  text-decoration: line-through;
+  color: rgb(15, 177, 3);
+}
+
+ul li.checked::before{
+    background-image: url(checkbox1.png);
+ }
+
+ ul li.important{
+    color: rgb(10, 53, 226);
+    font-weight: 700;
+ }
+
+ ul li.important::after{
+    content: "**";
+ }
+
+ul li span.edit-btn{
+    position: absolute;
+    right: 60px;
+    top: 4px;
+    width: 35px;
+    height: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    color:white;
+    line-height: 36px;
+    text-align: center;
+    background-color:red;
+}
+ul li span.delt-btn{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    width: 35px;
+    height: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    color:white;
+    line-height: 36px;
+    text-align: center;
+    background-color:red;
+}
+
+ul li span:hover{
+    box-shadow: 4px 4px 10px rgb(214, 15, 25);
+}
+
+/* Completed Button */
+
+#completed-btn{
+    border: none;
+    outline: none;
+    padding:  10px 30px;
+    background: rgb(52, 5, 206);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+   
+    border-radius: 3px;
+}
+#completed-btn:hover{
+    
+    box-shadow: 4px 4px 10px rgb(64, 89, 200);
+}
+
+/* Remove Button */
+#remove-btn{
+    width: 140px;
+    border: none;
+    outline: none;
+    padding:  10px 30px;
+    background: rgb(237, 41, 44);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#remove-btn:hover{
+    box-shadow: 4px 4px 10px rgb(214, 15, 25);
+}
+
+input.edit-input{
+    height: 24px;
+    background-color: white;
+    padding-left: 0px;
+
+   
+    
+}
